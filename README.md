@@ -1,4 +1,4 @@
-# debug-dojo
+# 🥋 debug-dojo
 
 Meu repositório de estudos pra treinar debugging e manutenção de código.
 
