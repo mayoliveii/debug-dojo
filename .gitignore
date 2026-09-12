@@ -1,5 +1,13 @@
 /.claude
 node_modules
 dist
+coverage
 *.log
 .DS_Store
+
+# Ambiente / editores
+.env
+.env.local
+*.local
+.vscode
+.idea
