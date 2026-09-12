@@ -21,6 +21,13 @@ npm run dev        # abre em http://localhost:5174
 npm run typecheck  # checagem de tipos
 ```
 
+Para gerar e visualizar o build de produção:
+
+```bash
+npm run build     # gera o build em dist/
+npm run preview   # serve o build gerado localmente
+```
+
 ## O que a aplicação faz
 
 - Carrega o histórico da conversa.
