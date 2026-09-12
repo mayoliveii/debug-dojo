@@ -28,6 +28,13 @@ Para checar tipos:
 npm run typecheck
 ```
 
+Para gerar e visualizar o build de produção:
+
+```bash
+npm run build     # gera o build em dist/
+npm run preview   # serve o build gerado localmente
+```
+
 ## O que a aplicação faz
 
 - Lista os cupons cadastrados.
