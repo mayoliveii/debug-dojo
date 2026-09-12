@@ -2,6 +2,7 @@ import { useReviews } from './hooks/useReviews'
 import { ReviewSummary } from './components/ReviewSummary'
 import { ReviewForm } from './components/ReviewForm'
 import { ReviewList } from './components/ReviewList'
+import { ErrorToast } from './components/ErrorToast'
 
 export function App() {
   const {
@@ -9,7 +10,9 @@ export function App() {
     summary,
     loadStatus,
     loadError,
-    addReview
+    addReview,
+    submitError,
+    submitStatus
   } = useReviews()
 
   return (
@@ -27,7 +30,7 @@ export function App() {
 
       <main className="app__content">
         <section className="app__col app__col--list">
-          <h2 className="section__title">O que estao dizendo</h2>
+          <h2 className="section__title">O que estão dizendo</h2>
           <ReviewList
             reviews={reviews}
             status={loadStatus}
@@ -39,6 +42,10 @@ export function App() {
           <ReviewForm onSubmit={addReview} />
         </section>
       </main>
+      {submitStatus === 'error' && (
+        <ErrorToast message={submitError} />
+      )}
     </div>
   )
 }
+
