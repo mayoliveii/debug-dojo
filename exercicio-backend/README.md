@@ -33,6 +33,13 @@ Checar tipos:
 npm run typecheck
 ```
 
+Build de produção:
+
+```bash
+npm run build   # compila para dist/
+npm start       # roda a versão compilada (dist/server.js)
+```
+
 > Alguns testes já existem e **podem estar falhando** - eles descrevem parte do comportamento
 > esperado. Sinta-se à vontade para adicionar novos testes durante a investigação.
 
