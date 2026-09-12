@@ -9,6 +9,7 @@ pensando em estado, edge cases e usabilidade.
 ## O que tem
 
 - **exercicio-frontend-chat**: um chat de suporte em React + TypeScript.
+- **exercicio-frontend-reviews**: avaliacoes de produto (estrelas + comentario) em React + TypeScript.
 - **exercicio-frontend**: um painel de cupons em React + TypeScript.
 - **exercicio-backend**: uma API de pedidos em Node + Express + TypeScript.
 - **leetcode**: aquecimentos e exercícios de lógica.
