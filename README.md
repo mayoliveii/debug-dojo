@@ -8,10 +8,10 @@ pensando em estado, edge cases e usabilidade.
 
 ## O que tem
 
-- **exercicio-frontend-chat** — um chat de suporte em React + TypeScript.
-- **exercicio-frontend** — um painel de cupons em React + TypeScript.
-- **exercicio-backend** — uma API de pedidos em Node + Express + TypeScript.
-- **leetcode** — aquecimentos e exercícios de lógica.
+- **exercicio-frontend-chat**: um chat de suporte em React + TypeScript.
+- **exercicio-frontend**: um painel de cupons em React + TypeScript.
+- **exercicio-backend**: uma API de pedidos em Node + Express + TypeScript.
+- **leetcode**: aquecimentos e exercícios de lógica.
 
 A maioria dos exercícios já está desenvolvida (foi onde eu fui praticando). Cada pasta tem um
 README próprio com o contexto e o que era pra fazer.
@@ -19,7 +19,7 @@ README próprio com o contexto e o que era pra fazer.
 ## Se for usar
 
 Como já estão em boa parte resolvidos, se quiser usar como desafio é só pedir pra uma IA
-ajustar o projeto pra você — reintroduzir os bugs, esconder as soluções ou montar uma variação
+ajustar o projeto pra você: reintroduzir os bugs, esconder as soluções ou montar uma variação
 nova a partir da base.
 
 ## Rodando

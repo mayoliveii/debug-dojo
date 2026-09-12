@@ -1,4 +1,4 @@
-# Exercício 4 — Deduplicação e Merge de Registros de Usuário de Múltiplas Fontes
+# Exercício 4 - Deduplicação e Merge de Registros de Usuário de Múltiplas Fontes
 
 **Nível:** Sênior
 
@@ -66,7 +66,7 @@ const registros = [
 ## Regras e casos especiais
 - Normalização antes de comparar: `email` → lowercase + trim; `cpf` → só dígitos; `telefone` → só dígitos, removendo prefixo `55` de país e `0` inicial de operadora quando presentes (ex.: `+55 11 99999-0000`, `011999990000` e `11999990000` são o mesmo número).
 - Campos "vazios" a desconsiderar na disputa: `null`, `undefined`, string vazia ou só espaços.
-- A união transitiva de identificadores é o ponto central — modele isso corretamente.
+- A união transitiva de identificadores é o ponto central - modele isso corretamente.
 - O golden record armazena os valores **normalizados** (email lowercase, cpf/telefone só dígitos).
 - A ordem dos grupos na saída deve ser **determinística**: ordene os grupos pelo menor `idsOriginais` (alfabético) do grupo.
 - Cuidado: dois registros sem nenhum identificador em comum **nunca** se unem, mesmo que tenham o mesmo nome.
@@ -87,20 +87,20 @@ Aproximadamente O(n · α(n)) com union-find (praticamente linear), ou O(n + m) 
 
 ## Casos de teste adicionais
 ```js
-// Caso A — encadeamento transitivo por identificadores diferentes
+// Caso A - encadeamento transitivo por identificadores diferentes
 const a = [
   { id: "1", fonte: "crm", prioridade: 1, email: "z@x.com", cpf: null, telefone: "11111111111", atualizadoEm: "2026-01-01T00:00:00Z" },
   { id: "2", fonte: "app", prioridade: 1, email: null, cpf: "99999999999", telefone: "11111111111", atualizadoEm: "2026-01-02T00:00:00Z" },
   { id: "3", fonte: "email", prioridade: 1, email: null, cpf: "99999999999", telefone: null, atualizadoEm: "2026-01-03T00:00:00Z" },
 ];
 
-// Caso B — empate de prioridade decidido por atualizadoEm
+// Caso B - empate de prioridade decidido por atualizadoEm
 const b = [
   { id: "old", fonte: "crm", prioridade: 2, nome: "Nome Antigo", email: "e@x.com", cpf: null, telefone: null, atualizadoEm: "2026-01-01T00:00:00Z" },
   { id: "new", fonte: "crm", prioridade: 2, nome: "Nome Novo",   email: "e@x.com", cpf: null, telefone: null, atualizadoEm: "2026-09-01T00:00:00Z" },
 ];
 
-// Caso C — mesmo nome, sem identificador comum (não unir)
+// Caso C - mesmo nome, sem identificador comum (não unir)
 const c = [
   { id: "a", fonte: "crm", prioridade: 1, nome: "Ana", email: "ana1@x.com", cpf: null, telefone: null, atualizadoEm: "2026-01-01T00:00:00Z" },
   { id: "b", fonte: "crm", prioridade: 1, nome: "Ana", email: "ana2@x.com", cpf: null, telefone: null, atualizadoEm: "2026-01-01T00:00:00Z" },

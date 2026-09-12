@@ -1,4 +1,4 @@
-# Exercício Front-end — Painel de Cupons
+# Exercício Front-end - Painel de Cupons
 
 Aplicação em **React + TypeScript** (Vite) que gerencia cupons de desconto de uma loja.
 O projeto já está **parcialmente implementado** e faz parte de um sistema real.
@@ -37,7 +37,7 @@ npm run typecheck
 
 > A camada de API (`src/api/couponService.ts`) simula um backend real, com **latência
 > variável** e **falhas ocasionais**. Trate esse arquivo como o servidor: ele não deve ser
-> alterado para "facilitar" — a aplicação precisa se comportar corretamente mesmo com uma
+> alterado para "facilitar" - a aplicação precisa se comportar corretamente mesmo com uma
 > rede instável.
 
 ## Objetivo

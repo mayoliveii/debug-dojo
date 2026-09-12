@@ -1,4 +1,4 @@
-# Aquecimento 1 — Soma Simples de uma Lista
+# Aquecimento 1 - Soma Simples de uma Lista
 
 **Nível:** Iniciante (o mais fácil de todos)
 

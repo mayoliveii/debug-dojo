@@ -1,4 +1,4 @@
-# Exercício 1 — Consolidação de Carrinhos por Usuário
+# Exercício 1 - Consolidação de Carrinhos por Usuário
 
 **Nível:** Pleno
 
@@ -43,7 +43,7 @@ const eventos = [
 ## Regras e casos especiais
 - O mesmo `produtoId` do mesmo usuário deve ser mesclado em uma única entrada.
 - `quantidade` sempre é inteiro ≥ 1, mas assuma que valores inválidos (`0`, negativos, `null`, `undefined`) podem aparecer e devem ser **ignorados** (o evento não conta).
-- `precoUnitario` pode vir como `null` em eventos corrompidos — nesse caso o evento também deve ser ignorado.
+- `precoUnitario` pode vir como `null` em eventos corrompidos - nesse caso o evento também deve ser ignorado.
 - Se um usuário só tiver eventos inválidos, ele **não** deve aparecer na saída.
 - Valores monetários devem ser tratados com cuidado (arredonde para 2 casas na saída final de cada item e do total).
 
@@ -63,19 +63,19 @@ Agregação em O(n); ordenação final O(k log k) por usuário, onde k é o nº 
 
 ## Casos de teste adicionais
 ```js
-// Caso A — eventos inválidos misturados
+// Caso A - eventos inválidos misturados
 const a = [
   { userId: 1, produtoId: "X", nome: "Cabo", precoUnitario: 10, quantidade: 0 },
   { userId: 1, produtoId: "X", nome: "Cabo", precoUnitario: null, quantidade: 2 },
   { userId: 1, produtoId: "Y", nome: "Fonte", precoUnitario: 200, quantidade: 1 },
 ];
 
-// Caso B — empate no valorTotal, desempate por nome
+// Caso B - empate no valorTotal, desempate por nome
 const b = [
   { userId: 5, produtoId: "P1", nome: "Zebra", precoUnitario: 100, quantidade: 1 },
   { userId: 5, produtoId: "P2", nome: "Alfa",  precoUnitario: 50,  quantidade: 2 },
 ];
 
-// Caso C — vazio
+// Caso C - vazio
 const c = [];
 ```

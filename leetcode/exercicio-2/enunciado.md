@@ -1,4 +1,4 @@
-# Exercício 2 — Normalização e Correlação de Pedidos com Clientes
+# Exercício 2 - Normalização e Correlação de Pedidos com Clientes
 
 **Nível:** Pleno
 
@@ -82,17 +82,17 @@ O(c + p), onde c = clientes e p = pedidos, mais O(c log c) na ordenação final.
 
 ## Casos de teste adicionais
 ```js
-// Caso A — cliente com todos os pedidos cancelados
+// Caso A - cliente com todos os pedidos cancelados
 const clientesA = [{ id: 1, nome: "Zé", email: "ze@x.com" }];
 const pedidosA = [
   { pedidoId: "x", clienteId: 1, valor: 500, data: "2026-05-01T00:00:00Z", status: "cancelado" },
 ];
 
-// Caso B — nenhum pedido
+// Caso B - nenhum pedido
 const clientesB = [{ id: 1, nome: "Só Cliente", email: "s@x.com" }];
 const pedidosB = [];
 
-// Caso C — apenas pedidos órfãos
+// Caso C - apenas pedidos órfãos
 const clientesC = [];
 const pedidosC = [
   { pedidoId: "o1", clienteId: 5, valor: 10, data: "2026-01-01T00:00:00Z", status: "pago" },

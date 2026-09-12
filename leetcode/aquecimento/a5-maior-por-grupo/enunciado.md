@@ -1,4 +1,4 @@
-# Aquecimento 5 — Produto Mais Caro por Categoria
+# Aquecimento 5 - Produto Mais Caro por Categoria
 
 **Nível:** Fácil/Médio (ponte para o Exercício 1)
 

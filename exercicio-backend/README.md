@@ -1,4 +1,4 @@
-# Exercício Back-end — API de Pedidos
+# Exercício Back-end - API de Pedidos
 
 API em **Node.js + TypeScript + Express** para processamento de pedidos de uma loja, com
 **controle de estoque**, **cupons de desconto** e **pagamento via gateway externo simulado**.
@@ -33,7 +33,7 @@ Checar tipos:
 npm run typecheck
 ```
 
-> Alguns testes já existem e **podem estar falhando** — eles descrevem parte do comportamento
+> Alguns testes já existem e **podem estar falhando** - eles descrevem parte do comportamento
 > esperado. Sinta-se à vontade para adicionar novos testes durante a investigação.
 
 ## Domínio
@@ -45,7 +45,7 @@ npm run typecheck
 
 O gateway de pagamento (`src/services/paymentGateway.ts`) representa uma **integração externa
 real**: tem latência e pode recusar cobranças. Trate-o como um terceiro cujo comportamento
-você não controla — apenas como a sua aplicação reage a ele.
+você não controla - apenas como a sua aplicação reage a ele.
 
 ## Endpoints
 

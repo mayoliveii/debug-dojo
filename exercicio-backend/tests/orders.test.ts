@@ -17,7 +17,7 @@ describe('Catálogo', () => {
   })
 })
 
-describe('Criação de pedidos — fluxo feliz', () => {
+describe('Criação de pedidos - fluxo feliz', () => {
   it('cria um pedido pago e calcula os totais', async () => {
     const res = await request(app)
       .post('/api/orders')
@@ -54,7 +54,7 @@ describe('Criação de pedidos — fluxo feliz', () => {
   })
 })
 
-describe('Criação de pedidos — regras', () => {
+describe('Criação de pedidos - regras', () => {
   it('recusa pedido quando não há estoque suficiente', async () => {
     const res = await request(app)
       .post('/api/orders')

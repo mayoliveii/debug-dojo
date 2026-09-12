@@ -1,4 +1,4 @@
-# Aquecimento 4 — Somar Gastos por Usuário
+# Aquecimento 4 - Somar Gastos por Usuário
 
 **Nível:** Fácil
 

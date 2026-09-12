@@ -1,4 +1,4 @@
-# Exercício 5 — Motor de Métricas de Séries Temporais com Janelas e Sessões
+# Exercício 5 - Motor de Métricas de Séries Temporais com Janelas e Sessões
 
 **Nível:** Sênior
 
@@ -10,11 +10,11 @@ Implemente `analisarEventos(eventos, opcoes)`. Cada evento tem `userId`, `tipo` 
 
 Retorne um objeto com três blocos:
 
-1. **`buckets`** — agregação por janela de tempo fixa (alinhada ao início da hora epoch), contendo, para cada bucket: `inicio` (ISO), `contagemPorTipo` (`{ view, click, error }`) e `usuariosUnicos`. Ordenados cronologicamente.
+1. **`buckets`** - agregação por janela de tempo fixa (alinhada ao início da hora epoch), contendo, para cada bucket: `inicio` (ISO), `contagemPorTipo` (`{ view, click, error }`) e `usuariosUnicos`. Ordenados cronologicamente.
 
-2. **`sessoes`** — para cada usuário, a lista de sessões. Uma sessão termina quando o gap entre dois eventos consecutivos (ordenados no tempo) do usuário excede `gapSessaoMinutos`. Cada sessão traz `inicio`, `fim`, `duracaoSegundos`, `quantidadeEventos`.
+2. **`sessoes`** - para cada usuário, a lista de sessões. Uma sessão termina quando o gap entre dois eventos consecutivos (ordenados no tempo) do usuário excede `gapSessaoMinutos`. Cada sessão traz `inicio`, `fim`, `duracaoSegundos`, `quantidadeEventos`.
 
-3. **`usuariosAnomalos`** — lista de `userId` que tiveram, em **qualquer janela deslizante de 60 segundos**, **5 ou mais** eventos do tipo `"error"`. Ordenada por `userId`.
+3. **`usuariosAnomalos`** - lista de `userId` que tiveram, em **qualquer janela deslizante de 60 segundos**, **5 ou mais** eventos do tipo `"error"`. Ordenada por `userId`.
 
 ## Entrada
 ```js
@@ -88,7 +88,7 @@ Sessões: O(n log n) dominado pela ordenação por usuário (ou O(n log k) por p
 
 ## Casos de teste adicionais
 ```js
-// Caso A — erros espalhados, nenhum burst de 5 em 60s
+// Caso A - erros espalhados, nenhum burst de 5 em 60s
 const a = {
   eventos: [
     { userId: "x", tipo: "error", timestamp: "2026-09-01T10:00:00Z" },
@@ -99,7 +99,7 @@ const a = {
   opcoes: { janelaMinutos: 30, gapSessaoMinutos: 5 }
 };
 
-// Caso B — eventos desordenados e tipo desconhecido
+// Caso B - eventos desordenados e tipo desconhecido
 const b = {
   eventos: [
     { userId: "y", tipo: "click", timestamp: "2026-09-01T09:59:59Z" },
@@ -110,7 +110,7 @@ const b = {
   opcoes: { janelaMinutos: 60, gapSessaoMinutos: 15 }
 };
 
-// Caso C — exatamente 5 erros no limite dos 60s
+// Caso C - exatamente 5 erros no limite dos 60s
 const c = {
   eventos: [
     { userId: "z", tipo: "error", timestamp: "2026-09-01T12:00:00Z" },

@@ -1,4 +1,4 @@
-# Exercício Front-end — Chat de Suporte
+# Exercício Front-end - Chat de Suporte
 
 Aplicação em **React + TypeScript** (Vite) que implementa um **chat de suporte** ao cliente.
 O projeto já está **parcialmente implementado** e faz parte de um produto real.
@@ -28,14 +28,14 @@ npm run typecheck  # checagem de tipos
 - Mostra o estado de cada mensagem enviada (**enviando / enviada / falhou**).
 
 > A camada de API (`src/api/chatService.ts`) simula o backend real, com **latência variável**
-> e **falhas ocasionais no envio**. Trate esse arquivo como o servidor — a aplicação precisa
+> e **falhas ocasionais no envio**. Trate esse arquivo como o servidor - a aplicação precisa
 > se comportar corretamente mesmo com uma rede instável e com respostas que demoram ou falham.
 
 ## Objetivo
 
 Garantir que o **fluxo de envio de mensagem** funcione de forma correta e previsível: a
 mensagem do usuário deve aparecer na tela, refletir seu estado real, sobreviver a envios
-sucessivos e lidar bem com erros — sem perder mensagens nem deixar a interface inconsistente.
+sucessivos e lidar bem com erros - sem perder mensagens nem deixar a interface inconsistente.
 
 ## Comportamento esperado
 

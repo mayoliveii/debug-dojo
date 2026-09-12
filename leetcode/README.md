@@ -1,13 +1,13 @@
-# Leetcode — Transformação e Organização de Dados (JS/TS)
+# Leetcode - Transformação e Organização de Dados (JS/TS)
 
 5 exercícios progressivos de algoritmos focados em transformação, processamento e organização de dados. Nível **Pleno → Sênior**.
 
 ## Índice
-1. [Exercício 1 — Consolidação de Carrinhos por Usuário](./exercicio-1/enunciado.md) — *Pleno*
-2. [Exercício 2 — Normalização e Correlação de Pedidos com Clientes](./exercicio-2/enunciado.md) — *Pleno*
-3. [Exercício 3 — Construção de Árvore de Categorias](./exercicio-3/enunciado.md) — *Pleno/Sênior*
-4. [Exercício 4 — Deduplicação e Merge de Registros de Múltiplas Fontes](./exercicio-4/enunciado.md) — *Sênior*
-5. [Exercício 5 — Motor de Métricas de Séries Temporais](./exercicio-5/enunciado.md) — *Sênior*
+1. [Exercício 1 - Consolidação de Carrinhos por Usuário](./exercicio-1/enunciado.md) - *Pleno*
+2. [Exercício 2 - Normalização e Correlação de Pedidos com Clientes](./exercicio-2/enunciado.md) - *Pleno*
+3. [Exercício 3 - Construção de Árvore de Categorias](./exercicio-3/enunciado.md) - *Pleno/Sênior*
+4. [Exercício 4 - Deduplicação e Merge de Registros de Múltiplas Fontes](./exercicio-4/enunciado.md) - *Sênior*
+5. [Exercício 5 - Motor de Métricas de Séries Temporais](./exercicio-5/enunciado.md) - *Sênior*
 
 Resolva na ordem: 1 e 2 firmam indexação/agregação/correlação; 3 introduz hierarquia e ciclos; 4 exige union-find/componentes conexas; 5 combina bucketização, sessionização e janela deslizante sob pressão de escala.
 
@@ -35,7 +35,7 @@ Sugestão: crie um `solucao.js` (ou `.ts`) dentro de cada pasta e implemente ali
 
 ### 🟢 Solução excelente (Pleno/Sênior)
 - **Corretude:** antecipa edge cases não listados (ciclos, transitividade, fronteiras de janela, overflow de pilha, precisão de float monetário).
-- **Estruturas de dados:** escolhe a estrutura certa — union-find, two-pointer, `Map` de adjacência — e explica o porquê.
+- **Estruturas de dados:** escolhe a estrutura certa - union-find, two-pointer, `Map` de adjacência - e explica o porquê.
 - **Legibilidade:** código modular e testável; fácil de estender (novo tipo de evento, nova fonte).
 - **Edge cases:** tratados por design; estados inválidos difíceis de representar.
 - **Eficiência:** complexidade ótima (ou trade-off consciente); uma passada onde possível; pensa em memória na escala de milhões.

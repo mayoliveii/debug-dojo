@@ -2,7 +2,7 @@
  * Gateway de pagamento externo simulado.
  *
  * Representa uma integração de terceiro: tem latência e pode falhar.
- * Trate como um serviço externo real — você não controla o comportamento dele,
+ * Trate como um serviço externo real - você não controla o comportamento dele,
  * apenas como a sua aplicação reage.
  */
 

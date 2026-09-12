@@ -1,4 +1,4 @@
-# Aquecimento 3 — Agrupar Produtos por Categoria
+# Aquecimento 3 - Agrupar Produtos por Categoria
 
 **Nível:** Iniciante/Fácil
 

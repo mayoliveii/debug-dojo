@@ -1,4 +1,4 @@
-# Aquecimento 2 — Contar Quantas Vezes Cada Valor Aparece
+# Aquecimento 2 - Contar Quantas Vezes Cada Valor Aparece
 
 **Nível:** Iniciante
 

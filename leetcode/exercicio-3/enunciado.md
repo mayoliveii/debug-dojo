@@ -1,4 +1,4 @@
-# Exercício 3 — Construção de Árvore de Categorias (Estrutura Hierárquica)
+# Exercício 3 - Construção de Árvore de Categorias (Estrutura Hierárquica)
 
 **Nível:** Pleno/Sênior
 
@@ -55,14 +55,14 @@ const produtos = [
 
 ## Regras e casos especiais
 - Uma categoria pode referenciar um `parentId` **inexistente** (dado corrompido). Trate essas categorias como **órfãs**: elas **não** devem aparecer na árvore, e você deve emitir/retornar a lista de ids órfãos (defina isso como segundo valor de retorno: `{ arvore, orfas }`).
-- Pode haver produtos apontando para `categoriaId` inexistente — ignore-os na contagem.
+- Pode haver produtos apontando para `categoriaId` inexistente - ignore-os na contagem.
 - A árvore pode ter **profundidade arbitrária**.
 - Cuidado com **ciclos** (ex.: A → B → A por dado inconsistente): a função não deve entrar em loop infinito; categorias envolvidas em ciclo devem ser tratadas como órfãs/descartadas.
 - Não assuma que a lista de entrada está ordenada (o pai pode aparecer depois do filho).
 
 ## Restrições
 - Até **200.000 categorias** e **2.000.000 de produtos**.
-- Profundidade pode chegar a milhares de níveis — soluções puramente recursivas ingênuas podem estourar a pilha; considere isso.
+- Profundidade pode chegar a milhares de níveis - soluções puramente recursivas ingênuas podem estourar a pilha; considere isso.
 
 ## O que o exercício avalia
 - Construção de estrutura hierárquica a partir de dados flat.
@@ -76,19 +76,19 @@ O(c + p) para indexar e contar, mais O(c log c) somado nas ordenações de `chil
 
 ## Casos de teste adicionais
 ```js
-// Caso A — parentId inexistente (órfã)
+// Caso A - parentId inexistente (órfã)
 const catA = [
   { id: 1, nome: "Raiz", parentId: null },
   { id: 2, nome: "Perdida", parentId: 999 },
 ];
 
-// Caso B — ciclo A->B->A
+// Caso B - ciclo A->B->A
 const catB = [
   { id: 1, nome: "A", parentId: 2 },
   { id: 2, nome: "B", parentId: 1 },
 ];
 
-// Caso C — pai declarado depois do filho
+// Caso C - pai declarado depois do filho
 const catC = [
   { id: 10, nome: "Filho", parentId: 20 },
   { id: 20, nome: "Pai", parentId: null },
