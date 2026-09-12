@@ -53,6 +53,10 @@ export function useReviews(): UseReviewsResult {
       })
   }, [])
 
+  useEffect(() => {
+    setSummary(computeSummary(reviews))
+  }, [reviews])
+
   const addReview = useCallback((input: NewReviewInput) => {
     const optimistic: Review = {
       id: `local_${Date.now()}`,
@@ -76,6 +80,8 @@ export function useReviews(): UseReviewsResult {
         setSubmitStatus('success')
       })
       .catch((err: unknown) => {
+        setReviews((prev) => prev.filter((r) => r.id !== optimistic.id))
+        console.log('Erro ao publicar avaliacao', err)
         setSubmitError(
           err instanceof Error ? err.message : 'Erro ao publicar avaliacao.'
         )

@@ -11,9 +11,23 @@ export function ReviewSummary({ summary }: ReviewSummaryProps) {
       <div className="summary__score">{summary.average.toFixed(1)}</div>
       <div className="summary__details">
         <Stars value={Math.round(summary.average)} />
-        <div className="summary__count">
-          {summary.total} avaliacao(oes)
-        </div>
+        {summary.total > 0 && (
+          <div className="summary__count">
+            {summary.total} avaliações
+          </div>
+        )}
+        {summary.total === 0 && (
+          <div className="summary__count">
+            Nenhuma avaliação
+          </div>
+        )
+        }
+        {summary.total === 1 && (
+          <div className="summary__count">
+            1 avaliação
+          </div>
+        )
+        }
       </div>
     </div>
   )

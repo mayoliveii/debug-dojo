@@ -23,7 +23,7 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <h2 className="form__title">Deixe sua avaliacao</h2>
+      <h2 className="form__title">Deixe sua avaliação</h2>
 
       <div className="form__row">
         <label htmlFor="author">Seu nome</label>
@@ -47,14 +47,18 @@ export function ReviewForm({ onSubmit }: ReviewFormProps) {
           id="comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-          placeholder="Conte como foi sua experiencia com o produto"
+          placeholder="Conte como foi sua experiência com o produto"
           rows={4}
         />
       </div>
 
-      <button className="form__submit" type="submit">
-        Publicar avaliacao
+      <
+        button className="form__submit" type="submit"
+        disabled={author === '' || rating === 0 || comment === ''}
+      >
+        Publicar avaliação
       </button>
+
     </form>
   )
 }
