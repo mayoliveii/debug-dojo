@@ -9,6 +9,13 @@
 4. [Exercício 4 - Deduplicação e Merge de Registros de Múltiplas Fontes](./exercicio-4/enunciado.md) - *Sênior*
 5. [Exercício 5 - Motor de Métricas de Séries Temporais](./exercicio-5/enunciado.md) - *Sênior*
 
+### Aquecimento (opcional, antes do Exercício 1)
+1. [Aquecimento 1 - Soma Simples de uma Lista](./aquecimento/a1-soma-simples/enunciado.md)
+2. [Aquecimento 2 - Contar Quantas Vezes Cada Valor Aparece](./aquecimento/a2-contar-itens/enunciado.md)
+3. [Aquecimento 3 - Agrupar Produtos por Categoria](./aquecimento/a3-agrupar-por-categoria/enunciado.md)
+4. [Aquecimento 4 - Somar Gastos por Usuário](./aquecimento/a4-somar-por-usuario/enunciado.md)
+5. [Aquecimento 5 - Produto Mais Caro por Categoria](./aquecimento/a5-maior-por-grupo/enunciado.md)
+
 Resolva na ordem: 1 e 2 firmam indexação/agregação/correlação; 3 introduz hierarquia e ciclos; 4 exige union-find/componentes conexas; 5 combina bucketização, sessionização e janela deslizante sob pressão de escala.
 
 Sugestão: crie um `solucao.js` (ou `.ts`) dentro de cada pasta e implemente ali.
