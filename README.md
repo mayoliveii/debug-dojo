@@ -1,40 +1,32 @@
-# 🥋 debug-dojo
+# debug-dojo
 
-> Dojô de debugging — exercícios práticos de investigação e conserto de código real, focados em causa raiz, estado e edge cases.
+Meu repositório de estudos pra treinar debugging e manutenção de código.
 
-Este repositório reúne desafios de **manutenção, debugging e evolução de aplicações existentes**
-(não é sobre criar app do zero). Cada projeto vem **parcialmente implementado**, com bugs
-intencionais e problemas de design que precisam ser descobertos lendo o código, executando e
-testando — como uma tarefa real que cai no seu colo em um sistema em produção.
+A ideia aqui não é criar app do zero, e sim praticar o que aparece no dia a dia: pegar um
+projeto já existente, entender o fluxo, achar a causa raiz de um bug e evoluir o código
+pensando em estado, edge cases e usabilidade.
 
-O objetivo não é decorar framework, e sim treinar: entender código existente, investigar,
-achar a **causa raiz**, pensar em **estados e fluxos**, lidar com **edge cases** e tomar
-decisões técnicas sustentáveis.
+## O que tem
 
-## Desafios
+- **exercicio-frontend-chat** — um chat de suporte em React + TypeScript.
+- **exercicio-frontend** — um painel de cupons em React + TypeScript.
+- **exercicio-backend** — uma API de pedidos em Node + Express + TypeScript.
+- **leetcode** — aquecimentos e exercícios de lógica.
 
-| Projeto | Stack | Tema |
-|---|---|---|
-| [`exercicio-frontend-chat`](./exercicio-frontend-chat) | React + TypeScript (Vite) | Chat de suporte — bug no fluxo de envio, estado local, erro e UX |
-| [`exercicio-frontend`](./exercicio-frontend) | React + TypeScript (Vite) | Painel de cupons — busca assíncrona, formulário, estados |
-| [`exercicio-backend`](./exercicio-backend) | Node + TypeScript (Express) | API de pedidos — estoque, cupons, pagamento, concorrência |
-| [`leetcode`](./leetcode) | JavaScript | Aquecimentos e exercícios de lógica/algoritmos |
+A maioria dos exercícios já está desenvolvida (foi onde eu fui praticando). Cada pasta tem um
+README próprio com o contexto e o que era pra fazer.
 
-Cada pasta tem seu próprio `README.md` com contexto, instruções de execução e um checklist
-do comportamento esperado. Os bugs **não** são revelados — a graça é encontrá-los.
+## Se for usar
 
-## Como usar
+Como já estão em boa parte resolvidos, se quiser usar como desafio é só pedir pra uma IA
+ajustar o projeto pra você — reintroduzir os bugs, esconder as soluções ou montar uma variação
+nova a partir da base.
+
+## Rodando
 
 ```bash
-cd <pasta-do-desafio>
+cd <pasta>
 npm install
-npm run dev     # front-ends (Vite)
-npm test        # back-end (Jest)
+npm run dev     # front-ends
+npm test        # back-end
 ```
-
-## Regras do dojô
-
-- Trate os arquivos que simulam backend/rede/serviços externos como **imutáveis**: o desafio é
-  a aplicação reagir corretamente a eles, não "facilitar" o mock.
-- Persistência em memória é proposital — o foco é raciocínio de engenharia, não infra.
-- Antes de corrigir, entenda o **fluxo**. Depois, pense no caminho infeliz tanto quanto no feliz.
